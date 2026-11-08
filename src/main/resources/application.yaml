@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mercadopreso}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
