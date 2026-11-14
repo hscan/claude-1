@@ -28,7 +28,7 @@ class CentroDistribuicaoRepositoryTest {
         assertThat(salvo.getDataCriacao()).isNotNull();
         assertThat(salvo.getDataAtualizacao()).isNotNull();
         assertThat(repository.findById(salvo.getId())).get()
-                .extracting(CentroDistribuicao::getNome).isEqualTo("CD Curitiba");
+            .hasFieldOrPropertyWithValue("nome", "CD Curitiba");
     }
 
     @Test
